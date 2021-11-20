@@ -2,7 +2,8 @@ import React from 'react'
 import Btn from './components/btn'
 import Clock from './components/clock'
 import InputSection from './components/inp'
-
+import {Play, Pause, Restart} from './components/icons'
+import './styles/app.css'
 
 class App extends React.Component{
   constructor(props){
@@ -91,7 +92,7 @@ class App extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className={'app'}>
         <h1>Section + Break Clock</h1>
         <section className={'inputs'}>
           <InputSection 
@@ -109,9 +110,11 @@ class App extends React.Component{
         </section>
         <section>
           <Clock clockState={this.state.state} min={this.state.min} sec={this.state.sec}/>
-          <Btn onClick={this.run} txt={'▶'}/>
-          <Btn onClick={this.stop} txt={'⏸'}/>
-          <Btn onClick={this.restart} txt={'🔃'}/>
+          <div className={'ppr'}>
+            <Btn onClick={this.run} txt={Play()}/>
+            <Btn onClick={this.stop} txt={Pause()}/>
+            <Btn onClick={this.restart} txt={Restart()} className={'restart-btn'}/>
+          </div>
         </section>
       </div>
     )

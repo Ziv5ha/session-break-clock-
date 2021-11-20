@@ -1,0 +1,13 @@
+div{
+    display: flex;
+    flex-direction: column;
+}
+.inp-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+h3{
+    font-size: 26px;
+}

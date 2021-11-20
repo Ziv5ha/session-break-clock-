@@ -1,0 +1,16 @@
+button{
+    padding: 0;
+    border: 0;
+    background-color: #F0E9D2;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    transition: font-size 0.25s, transform 0.5s ;
+    cursor: pointer;
+}
+button:hover{
+    font-size: 23px;
+}
+.restart-btn:hover{
+    transform: rotate(-180deg)
+}
